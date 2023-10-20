@@ -1,0 +1,27 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+     padding: 10px;
+     background-color: rgb(198, 191, 204);     
+}
+
+input{
+     width: 100%;
+     padding: 10px;
+     height: 45px;
+}
+
+button{
+     height: 45px;
+     width: 150px;
+     margin: 10px 0 0 0 ;
+     font-weight: 300;
+     color: aliceblue;
+     border: none;
+     background-color: #5f9341;
+}
