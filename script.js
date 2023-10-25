@@ -1,30 +1,27 @@
-const  myLeads = [ ]
+const myLeads = [];
 const inputEl = document.getElementById("input-el");
-const inputBtn = document.getElementById("input-btn")
+const inputBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ulEl");
 
-
-inputBtn.addEventListener("click",() => {
-     myLeads.push(inputEl.value)
-     console.log(myLeads);
-
-     inputEl.value = " ";
-
-     renderLeads();     
+inputBtn.addEventListener("click", () => {
+  const inputValue = inputEl.value.trim();
+  if (inputValue !== "") {
+     myLeads.push(inputEl.value);
+    inputEl.value = " ";
+    renderLeads();
+  }
 });
 
-inputBtn.addEventListener()
 // Wrapped the code under the function below.
-function renderLeads(){
-     let listItems = " "; 
-     for (let i = 0; i < myLeads.length; i++) {
+function renderLeads() {
+  let listItems = " ";
+  for (let i = 0; i < myLeads.length; i++) {
+    listItems += `<li>
+                                 <a target='_blank' href='${myLeads[i]}'>
+                                   ${myLeads[i]}
+                         </li>`;
 
-     listItems += "<li>" + myLeads[i] + "</li>"
-     console.log(listItems);
- }
-
-ulEl.innerHTML = listItems
-     
+    console.log(listItems);
+  }
+  ulEl.innerHTML = listItems;
 }
-
-
